@@ -41,7 +41,7 @@ function letterGrade(avr) {
 //TODO Define Variables: Start with a balance variable.
 
 //TODO Create Functions: Create functions to deposit money, withdraw money, and check the balance.
-/*
+
 
 function dep(b){ // Deposit
     let deposit = parseInt(prompt("How much would you like to deposit?"));
@@ -89,20 +89,21 @@ let todo = ["Clean the Bathroom", "Clean the backyard", "Clean the dishes", "Was
 //TODO Create Functions: Create functions to add a task and display the to-do list.
 
 function addTask(arr, item){
-    arr.push(prompt("Would you like to add a todo item?"))
+    arr.push(prompt("What task would you like to add?"))
     return arr;
 }
 
-function removeAnItem(taskCompleted)
+function removeAnItem(arr){
+    // Removes the second item in the array which is "Clean the backyard"
+    arr.splice(1, 1)
+}
 
 addTask(todo)
+removeAnItem(todo)
 for (let i = 0; i < todo.length; i++){
     console.log(todo[i])
 }
 
- 
- 
- 
 //! Temperature Converter
 //? Create a program that converts temperatures between Celsius, Fahrenheit, and Kelvin.
 
@@ -163,7 +164,7 @@ function celsiusToFahrenheit(celsius){
 //? Create a program that allows the user to manage a playlist of songs.
  
 //TODO Define an Array: Define an array to store the song titles.
-let playlist = [];
+let playlist = ["Take on me", "Clair de lune", "River flows in you", "As it was"];
 //TODO Create Functions: Create functions to add a song, remove a song, and display the playlist.
 //TODO Use if-else Statements and Loops: Use if-else statements and loops within the functions to handle the operations.
 function addMusic(arr){
@@ -172,20 +173,21 @@ function addMusic(arr){
 }
 
 function removeMusic(arr){
-    
+    arr.splice(2, 1)
+    // removes the 3rd item in the array
 }
 //* Output Results: Use console.log to display the playlist after each operation.
  let choice = prompt("Would you like to add music to a playlist? (Y/N)")
     if (choice === 'Y' || choice === 'y'){
         addMusic(playlist)
-        console.log(playlist)
-    }else if (choice === 'N' || choice === 'n'){
-        
-    }else{
-        console.log("Invalid input.")
     }
 
-*/
+    removeMusic(playlist)
+
+    console.log(playlist)
+
+
+
     //! Daily Temperatures
 //? Create a program that processes daily temperature readings, calculates the average temperature, and identifies the highest and lowest temperatures.
  
